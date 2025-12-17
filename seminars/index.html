@@ -2,12 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>KTH Dynamics Seminar 2026</title>
-  <meta name="description" content="KTH Dynamics Seminar 2026">
-  <meta name="keywords" content="mathematics, dynamics, research, seminar">
+  <title>Seminar Talks</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="stylesheet" href="hemsida.css">
+  <link rel="stylesheet" href="../hemsida.css">
 
   <style>
     body {
@@ -18,29 +16,75 @@
       margin: auto;
       padding: 2rem;
     }
+
     h1 {
       font-size: 1.8em;
     }
+
     h4 {
       margin-top: 1.5rem;
     }
+
     a {
       color: darkblue;
       text-decoration: none;
     }
+
     a:hover {
       text-decoration: underline;
     }
-    .columns {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      margin-top: 1rem;
+
+    .seminar-box {
+      border: 2px solid black;
+      padding: 20px;
+      margin: 1.5rem auto;
+      max-width: 900px;
+      background-color: LightSalmon;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
     }
-    .column {
-      flex: 1;
-      min-width: 300px;
+
+    .talk {
+      margin-bottom: 1.2rem;
     }
+
+    details {
+      margin-bottom: 0.3rem;
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: bold;
+      list-style: none;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary::before {
+      content: "▶";
+      display: inline-block;
+      margin-right: 0.4rem;
+      font-size: 0.8em;
+      transition: transform 0.2s ease;
+    }
+
+    details[open] summary::before {
+      transform: rotate(90deg);
+    }
+
+    .abstract {
+      margin-top: 0.5rem;
+      padding-left: 1rem;
+      border-left: 3px solid black;
+    }
+
+    .talk-meta {
+      margin-left: 1.3rem;
+      font-size: 0.95em;
+    }
+
     .last-updated {
       text-align: right;
       font-size: 1.05em;
@@ -51,65 +95,110 @@
 </head>
 
 <body>
-  <h1><i>KTH Dyanamics Seminar 2026</i></h1>
-  
-  <p>
-    Hello! I do mathematics and hold a postdoctoral research position at the
-    <a href="https://www.kth.se/math/department-of-mathematics-1.833813">Department of Mathematics</a>,
-    <a href="https://www.kth.se/en">Royal Institute of Technology</a>, supported by the
-    <a href="https://kaw.wallenberg.org/en/mats-bylund">Knut and Alice Wallenberg Foundation</a>.
-    I am part of the <a href="https://www.kth.se/math/analysis/dynsyst">Dynamical Systems</a> group.
-  </p>
 
-    <div class="column", style="border: 2px solid black;
-            padding: 20px;
-            margin: 0 auto;
-            max-width: 600px;
-            background-color: LightSalmon;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;">
-      <h4><i>Publications</i></h4>
-      <small>(listed by publication date)</small>
-      <ul>
-        <li>
-          <a href="https://www1.maths.lth.se/matematiklth/personal/magnusa/">M. Aspenberg</a>,
-          M. Bylund,
-          <a href="https://www1.maths.lth.se/matematiklth/personal/weiwei/">W. Cui</a><br>
-          <b><i>Slowly recurrent Collet&ndash;Eckmann maps with non-empty Fatou set</i></b><br>
-          <a href="https://www.lms.ac.uk/publications/plms">Proceedings of the London Mathematical Society</a>
-          <b>128</b> (2024), no. 1, Paper No. e12574<br>
-          published version:
-          <a href="https://doi.org/10.1112/plms.12574">doi.org/10.1112/plms.12574</a><br>
-          preprint:
-          <a href="https://arxiv.org/abs/2207.14046">arXiv:2207.14046</a>
-        </li>
+<h1><i>Seminar Talks</i></h1>
 
-        <li>
-          M. Bylund<br>
-          <b><i>Critical recurrence in the real quadratic family</i></b><br>
-          <a href="https://www.cambridge.org/core/journals/ergodic-theory-and-dynamical-systems">
-            Ergodic Theory and Dynamical Systems
-          </a>
-          <b>43</b> (2023), no. 10, 3255-3287<br>
-          published version:
-          <a href="https://doi.org/10.1017/etds.2022.78">doi.org/10.1017/etds.2022.78</a><br>
-          preprint:
-          <a href="https://arxiv.org/abs/2103.17200">arXiv:2103.17200</a>
-        </li>
+<p>
+  Upcoming and recent seminar talks in dynamics and related areas.
+</p>
 
-        <li>
-          M. Bylund<br>
-          <b><i>Equivalence of Collet&ndash;Eckmann conditions for slowly recurrent rational maps</i></b><br>
-          <a href="https://www.ams.org/publications/journals/journalsframework/ecgd">Conformal Geometry and Dynamics</a>
-          <b>26</b> (2022), 235-242<br>
-          published version:
-          <a href="https://doi.org/10.1090/ecgd/378">doi.org/10.1090/ecgd/378</a><br>
-          preprint:
-          <a href="https://arxiv.org/abs/2209.05237">arXiv:2209.05237</a>
-        </li>
-      </ul>
+<div class="seminar-box">
+  <h4><i>Upcoming</i></h4>
+
+  <div class="talk">
+    <details>
+      <summary>
+        Harmonic measure and Julia sets
+      </summary>
+      <div class="abstract">
+        <p>
+          We study harmonic measure on the Julia set $J_c$ of a quadratic
+          polynomial $f_c(z) = z^2 + c$.
+        </p>
+        <p>
+          In particular, for $\omega_c$-a.e. $z \in J_c$ we show
+          \[
+            \lim_{r \to 0}
+            \frac{\log \omega_c(B(z,r))}{\log r} = \frac{1}{2}.
+          \]
+        </p>
+      </div>
+    </details>
+
+    <div class="talk-meta">
+      Speaker: Alice Example<br>
+      Date: 15 February 2026, 14:00–15:00<br>
+      Location: Room B412
     </div>
+  </div>
 
-  <p class="last-updated">Last updated: October 29, 2025</p>
+  <div class="talk">
+    <details>
+      <summary>
+        Slowly recurrent Collet–Eckmann maps
+      </summary>
+      <div class="abstract">
+        <p>
+          We discuss constructions of rational maps satisfying the
+          Collet–Eckmann condition together with prescribed slow recurrence
+          of the critical orbit.
+        </p>
+      </div>
+    </details>
+
+    <div class="talk-meta">
+      Speaker: Bob Example<br>
+      Date: 22 February 2026<br>
+      Location: Online
+    </div>
+  </div>
+</div>
+
+<div class="seminar-box">
+  <h4><i>Past</i></h4>
+
+  <div class="talk">
+    <details>
+      <summary>
+        Rates of recurrence in rational dynamics
+      </summary>
+      <div class="abstract">
+        <p>
+          We investigate quantitative recurrence properties of critical
+          points and their relation to expansion and harmonic measure.
+        </p>
+      </div>
+    </details>
+
+    <div class="talk-meta">
+      Speaker: Carol Example<br>
+      Date: 10 January 2026
+    </div>
+  </div>
+</div>
+
+<p class="last-updated">Last updated: January 2026</p>
+
+<!-- MathJax -->
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<script>
+  document.querySelectorAll("details").forEach(d => {
+    d.addEventListener("toggle", () => {
+      if (d.open && window.MathJax) {
+        MathJax.typesetPromise([d]);
+      }
+    });
+  });
+</script>
+
 </body>
 </html>
