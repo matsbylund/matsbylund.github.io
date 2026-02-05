@@ -7,12 +7,6 @@
 
   <link rel="stylesheet" href="../hemsida.css">
 
-  <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/icalendar@6.1.11/index.global.min.js"></script>
-
-
-
   <style>
     body {
       background-color: LightSalmon;
@@ -99,40 +93,6 @@
       color: black;
       margin-top: 1.5rem;
     }
-
-    /* ===== Tabs ===== */
-
-    .tab-content {
-  display: none;
-    }
-    
-    .tab-content.active {
-      display: block;
-    }
-    
-    .tabs {
-      margin-bottom: 1em;
-    }
-    
-    .tab-btn {
-      background: none;
-      border: none;
-      padding: 0.3em 0.6em;
-      cursor: pointer;
-      font: inherit;
-    }
-    
-    .tab-btn.active {
-      border-bottom: 2px solid currentColor;
-      font-weight: bold;
-    }
-    
-    /* calendar spacing only */
-    #calendar-room-1,
-    #calendar-room-2 {
-      max-width: 900px;
-      margin-bottom: 3rem;
-    }
   </style>
 </head>
 
@@ -141,21 +101,15 @@
 <h1><i>KTH Dynamics Seminar</i></h1>
 
 <p>
-  Upcoming and past seminar talks in dynamics and related areas.
-  Click on the title to see the abstract.
+  Upcoming and past seminar talks in dynamics and related areas. Click on the title to see the abstract.
+</p>
+<p>
+  Here you can see the booking schedule for seminar rooms <strong><a href="https://webmail.kth.se/owa/calendar/sci_math_3418@ug.kth.se/Calendar/calendar.html">3418</a></strong> 
+  and <strong><a href="https://webmail.kth.se/owa/calendar/sci_math_3721@ug.kth.se/Calendar/calendar.html">3721</a></strong>.
 </p>
 
-<div class="tabs">
-  <button class="tab-btn active" data-tab="speakers">Speakers</button>
-  <button class="tab-btn" data-tab="bookings">Room bookings</button>
-</div>
-
-  <!-- ================= TALKS TAB ================= -->
-
-  <div id="speakers" class="tab-content active">
-
-    <div class="seminar-box">
-      <h4><i>Speakers 2026</i></h4>
+<div class="seminar-box">
+  <h4><i>Speakers 2026</i></h4>
 
   <div class="talk">
     <details>
@@ -261,7 +215,7 @@
     </details>
 
     <div class="talk-meta">
-      Speaker: Mihajlo Cekić (UHZ/CNRS)<br>
+      Speaker: Mihajlo CekiÄ (UHZ/CNRS)<br>
       Date: 26 February 2026, 13:00-14:00<br>
       Location: Room 3721
     </div>
@@ -318,14 +272,14 @@
           if and only if $\alpha \leq 1$.
         </p>
         <p>
-          This talk is based on joint work with Graczyk and Świątek.
+          This talk is based on joint work with Graczyk and ÅwiÄtek.
         </p>
       </div>
     </details>
 
     <div class="talk-meta">
       Speaker: Mats Bylund (KTH)<br>
-      Date: 4 February 2026, 15:00–16:00<br>
+      Date: 4 February 2026, 15:00â16:00<br>
       Location: Room 3418
     </div>
   </div>
@@ -355,13 +309,14 @@
       Location: Room 3418
     </div>
   </div>
+  
+</div>
+  
 
-    </div>
+<div class="seminar-box">
+  <h4><i>Past speakers</i></h4>
 
-    <div class="seminar-box">
-      <h4><i>Past speakers</i></h4>
-
-      <div class="talk">
+  <div class="talk">
     <details>
       <summary>
         Invariant distributions of partially hyperbolic systems: fractal graphs, excessive regularity, and rigidity
@@ -371,7 +326,7 @@
           In this talk, we will introduce a novel approach linking fractal geometry to partially hyperbolic dynamics, 
           revealing several new phenomena related to regularity jumps and rigidity. One key result demonstrates a sharp 
           phase transition for partially hyperbolic diffeomorphisms $f$ with a contracting center direction on $T^3$: $f$ 
-          is $C^\infty$-rigid if and only if both $E^s$ and $E^c$ exhibit Hölder exponents exceeding the expected threshold. 
+          is $C^\infty$-rigid if and only if both $E^s$ and $E^c$ exhibit HÃ¶lder exponents exceeding the expected threshold. 
           These and related results originate from a general non-fractal invariance principle: for a skew product $F$ over a 
           partially hyperbolic system $f$, if $F$ expands fibers more weakly than $f$ along $W^u_f$ in the base, then for any 
           $F$-invariant section $\Phi$, if $\Phi$ has no fractal graph, then it is smooth along $W^u_f$ and holonomy-invariant.
@@ -432,7 +387,7 @@
           the size of coverings for `self-similar' dynamical systems.
         </p>
         <p>
-          Joint with Balázs Bárány (BME Budapest) and Henna Koivusalo (Bristol).
+          Joint with BalÃ¡zs BÃ¡rÃ¡ny (BME Budapest) and Henna Koivusalo (Bristol).
         </p>
       </div>
     </details>
@@ -455,7 +410,7 @@
           On the real line there is a folklore conjecture that the only way that the actual dimension drops below the similarity
           dimension is if exact overlaps are present. In a breakthrough paper, Hochman confirmed the conjecture assuming the 
           exponential separation condition (ESC). This was recently extended by Rapaport to analytic self-conformal sets on the real line. 
-          Together with Balázs Bárány and Sascha Troscheit, we show that the ESC is a topologically typical property, moreover, we give an 
+          Together with BalÃ¡zs BÃ¡rÃ¡ny and Sascha Troscheit, we show that the ESC is a topologically typical property, moreover, we give an 
           explicit sufficient condition to verify the ESC by introducing a novel concept that we call the dual iterated function system. 
           I will give an overview of all necessary background before presenting our new results.
         </p>
@@ -463,7 +418,7 @@
     </details>
 
     <div class="talk-meta">
-      Speaker: István Kolossváry (Rényi Institute)<br>
+      Speaker: IstvÃ¡n KolossvÃ¡ry (RÃ©nyi Institute)<br>
       Date: 28 October 2025, 13:00-14:00<br>
       Location: Room 3418
     </div>
@@ -481,8 +436,8 @@
           self-correlation functions in analytic number theory. I will discuss how these two functions are related to each other also by the 
           means of a generalization of the Brjuno function &ndash; the so-called semi-Brjuno function $B_0(x)$ &ndash; built using the by-excess 
           continued fraction map. Namely, $B(x)$ and $W(x)$ can be expressed in terms of the even $B_0^+$ and odd $B_0^-$ parts of $B_0(x)$, 
-          respectively, up to a bounded defect. Moreover we study the regularity of the differences $\Delta^+(x) = B^+(x) − 2B_0^+(x)$ and $\Delta^−(x) = W^−(x) − 2B_0^− (x)$, 
-          the first of which is Hölder continuous whereas the second exhibits discontinuities at rationals, behaving similarly to the classical popcorn function.
+          respectively, up to a bounded defect. Moreover we study the regularity of the differences $\Delta^+(x) = B^+(x) â 2B_0^+(x)$ and $\Delta^â(x) = W^â(x) â 2B_0^â (x)$, 
+          the first of which is HÃ¶lder continuous whereas the second exhibits discontinuities at rationals, behaving similarly to the classical popcorn function.
         </p>
         <p>
           This is joint work with Claire Burrin (University of Zurich) and Seul Bee Lee (Seoul National University): see 
@@ -601,14 +556,14 @@
       </summary>
       <div class="abstract">
         <p>
-          I plan to review problems and recent results regarding smooth curves in the moduli space of translation surfaces and Teichmüller positive semi-orbits starting from such curves. 
+          I plan to review problems and recent results regarding smooth curves in the moduli space of translation surfaces and TeichmÃ¼ller positive semi-orbits starting from such curves. 
           The main part of the talk is applications that motivate abstract results. Two main applications relate to billiards on nibbled ellipses and Hamiltonian systems with reflections.
         </p>
       </div>
     </details>
 
     <div class="talk-meta">
-      Speaker: Krzysztof Frączek (Nicolaus Copernicus University, Torun)<br>
+      Speaker: Krzysztof FrÄczek (Nicolaus Copernicus University, Torun)<br>
       Date: 17 April 2025, 13:00-14:00<br>
       Location: Room 3418
     </div>
@@ -617,20 +572,20 @@
   <div class="talk">
     <details>
       <summary>
-        A Poincaré section for horocycle flows: escape of mass
+        A PoincarÃ© section for horocycle flows: escape of mass
       </summary>
       <div class="abstract">
         <p>
           Motivated by a hyperbolic analog of the Lester&ndash;Wigman "vanishing area correlations"-conjecture for euclidean lattice points we investigate the dynamical properties of a natural 
-          choice of a Poincaré section, associated with $\operatorname{H}/\operatorname{SL}(2,Z)$, and the horocycle flow on the upper half plane $H$. Since the horocycle *flow* is mixing, 
-          one might hope for an easy proof of vanishing area correlations by showing that the Poincaré map is mixing. However, not only is the Poincaré map non-mixing; even equidistribution/ergodicity 
+          choice of a PoincarÃ© section, associated with $\operatorname{H}/\operatorname{SL}(2,Z)$, and the horocycle flow on the upper half plane $H$. Since the horocycle *flow* is mixing, 
+          one might hope for an easy proof of vanishing area correlations by showing that the PoincarÃ© map is mixing. However, not only is the PoincarÃ© map non-mixing; even equidistribution/ergodicity 
           breaks down badly due to escape of mass. Amusingly, we can still show vanishing of area correlations (but "for the wrong reason".)
         </p>
       </div>
     </details>
 
     <div class="talk-meta">
-      Speaker: Pär Kurlberg (KTH)<br>
+      Speaker: PÃ¤r Kurlberg (KTH)<br>
       Date: 3 April 2025, 13:00-14:00<br>
       Location: Room 3418
     </div>
@@ -647,7 +602,7 @@
           about perturbations of CE-maps in the unicritical family $f_c(z) = z^d + c$, where $c$ is a parameter in the complex plane. This is a well studied family of maps and it has a long history. 
           Let $\mathcal{M}_d$ be the connectedness locus, or simply, the Mandelbrot set, i.e. parameters $c$ for which the Julia set is connected. Around the millenia shift, J. Rivera-Letelier proved 
           that critically non-recurrent maps (Misiurewicz maps) in this family are Lebesgue density points of the complement of $\mathcal{M}_d$ (I proved a corresponding result for rational maps in 2009). 
-          In a series of quite recent papers, J. Graczyk and G. Świątek proved, among other things, that typical CE-parameters w.r.t. harmonic measure are Lebesgue density points of the complement of $\mathcal{M}_d$. 
+          In a series of quite recent papers, J. Graczyk and G. ÅwiÄtek proved, among other things, that typical CE-parameters w.r.t. harmonic measure are Lebesgue density points of the complement of $\mathcal{M}_d$. 
           For these maps, in particular, the critical point is allowed to be slowly recurrent. Moreover, in 2011, A. Avila, M. Lyubich and W. Shen proved that, in particular, CE-maps cannot be density points of 
           $\mathcal{M}_d$. The main result I will present is that for each CE-map $f_c$ in the unicritical family, $c$ is a Lebesgue density point of the complement of the Mandelbrot set. 
           It also generalizes earlier results by M. Bylund W. Cui and myself for slowly recurrent rational maps.
@@ -740,14 +695,14 @@
       <div class="abstract">
         <p>
           In this talk I will introduce the (planetary) $N$-body problem and briefly discuss its historical background: From Ptolemy, Copernicus, Kepler and Tycho Brahe to Newton; 
-          from Laplace, Euler and Lagrange, to Mittag-Leffler and Poincaré, ending up with Kolmogorov, Arnold and Moser. Then I will move to discuss the stability problem of our Solar system and, 
+          from Laplace, Euler and Lagrange, to Mittag-Leffler and PoincarÃ©, ending up with Kolmogorov, Arnold and Moser. Then I will move to discuss the stability problem of our Solar system and, 
           in particular, the Sun-Jupiter-Saturn. Is it stable? Do the planets orbit around the Sun in a (quasi)periodic fashion?
         </p>
       </div>
     </details>
 
     <div class="talk-meta">
-      Speaker: Jordi-Lluís Figueras (Uppsala)<br>
+      Speaker: Jordi-LluÃ­s Figueras (Uppsala)<br>
       Date: 13 February 2025, 15:15-16:15<br>
       Location: Room 3721
     </div>
@@ -774,19 +729,9 @@
     </div>
   </div>
 
-  </div>
-
-  <!-- ================= BOOKINGS TAB ================= -->
-
-  <div id="bookings" class="tab-content">
-  <h3>Seminar room A</h3>
-  <div id="calendar-room-1"></div>
-
-  <h3>Seminar room B</h3>
-  <div id="calendar-room-2"></div>
-</div>
   
 
+  
 </div>
 
 <p class="last-updated">Last updated: January 2026</p>
@@ -803,70 +748,13 @@
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
 <script>
-  document.querySelectorAll(".tab-buttons button").forEach(button => {
-    button.addEventListener("click", () => {
-      const tab = button.dataset.tab;
-
-      document.querySelectorAll(".tab-buttons button").forEach(b =>
-        b.classList.remove("active")
-      );
-      document.querySelectorAll(".tab-content").forEach(c =>
-        c.classList.remove("active")
-      );
-
-      button.classList.add("active");
-      const activeTab = document.getElementById(tab);
-      activeTab.classList.add("active");
-
-      if (tab === "bookings") {
-        activeTab.querySelectorAll("iframe").forEach(iframe => {
-          if (!iframe.src) {
-            iframe.src = iframe.dataset.src;
-          }
-        });
+  document.querySelectorAll("details").forEach(d => {
+    d.addEventListener("toggle", () => {
+      if (d.open && window.MathJax) {
+        MathJax.typesetPromise([d]);
       }
     });
   });
-</script>
-<script>
-  // tabs
-  document.querySelectorAll('.tab-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-      document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
-
-      btn.classList.add('active');
-      document.getElementById(btn.dataset.tab).classList.add('active');
-
-      if (btn.dataset.tab === 'bookings') {
-        calendar1.render();
-        calendar2.render();
-      }
-    });
-  });
-
-  function makeCalendar(el, icsUrl) {
-    return new FullCalendar.Calendar(el, {
-      initialView: 'timeGridWeek',
-      firstDay: 1,
-      height: 'auto',
-      nowIndicator: true,
-      events: {
-        url: icsUrl,
-        format: 'ics'
-      }
-    });
-  }
-
-  const calendar1 = makeCalendar(
-    document.getElementById('calendar-room-1'),
-    'https://webmail.kth.se/owa/calendar/sci_math_3721@ug.kth.se/Calendar/calendar.ics'
-  );
-
-  const calendar2 = makeCalendar(
-    document.getElementById('calendar-room-2'),
-    'ICS_URL_ROOM_2'
-  );
 </script>
 
 </body>
