@@ -804,7 +804,7 @@
         <div class="booking-room">
           <h5>Room 3418</h5>
           <iframe
-            src="https://webmail.kth.se/owa/calendar/sci_math_3418@ug.kth.se/Calendar/calendar.html"
+            data-src="https://webmail.kth.se/owa/calendar/sci_math_3418@ug.kth.se/Calendar/calendar.html"
             width="400"
             height="300"
             style="border:0;">
@@ -814,7 +814,7 @@
         <div class="booking-room">
           <h5>Room 3721</h5>
           <iframe
-            src="https://webmail.kth.se/owa/calendar/sci_math_3721@ug.kth.se/Calendar/calendar.html"
+            data-src="https://webmail.kth.se/owa/calendar/sci_math_3721@ug.kth.se/Calendar/calendar.html"
             width="400"
             height="300"
             style="border:0;">
@@ -842,14 +842,6 @@
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
 <script>
-  document.querySelectorAll("details").forEach(d => {
-    d.addEventListener("toggle", () => {
-      if (d.open && window.MathJax) {
-        MathJax.typesetPromise([d]);
-      }
-    });
-  });
-
   document.querySelectorAll(".tab-buttons button").forEach(button => {
     button.addEventListener("click", () => {
       const tab = button.dataset.tab;
@@ -862,7 +854,16 @@
       );
 
       button.classList.add("active");
-      document.getElementById(tab).classList.add("active");
+      const activeTab = document.getElementById(tab);
+      activeTab.classList.add("active");
+
+      if (tab === "bookings") {
+        activeTab.querySelectorAll("iframe").forEach(iframe => {
+          if (!iframe.src) {
+            iframe.src = iframe.dataset.src;
+          }
+        });
+      }
     });
   });
 </script>
