@@ -7,6 +7,12 @@
 
   <link rel="stylesheet" href="../hemsida.css">
 
+  <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/icalendar@6.1.11/index.global.min.js"></script>
+
+
+
   <style>
     body {
       background-color: LightSalmon;
@@ -96,49 +102,36 @@
 
     /* ===== Tabs ===== */
 
-    .tabs {
-      max-width: 900px;
-      margin: 2rem auto;
-    }
-
-    .tab-buttons {
-      display: flex;
-      gap: 0.5rem;
-      margin-bottom: 1rem;
-    }
-
-    .tab-buttons button {
-      padding: 0.5rem 1rem;
-      border: 2px solid black;
-      background-color: #F4CBB3;
-      cursor: pointer;
-      border-radius: 6px 6px 0 0;
-      font-size: 1em;
-    }
-
-    .tab-buttons button.active {
-      background-color: LightSalmon;
-      border-bottom: 2px solid LightSalmon;
-      font-weight: bold;
-    }
-
     .tab-content {
-      display: none;
+  display: none;
     }
-
+    
     .tab-content.active {
       display: block;
     }
-
-    .booking-grid {
-      display: flex;
-      gap: 1.5rem;
-      flex-wrap: wrap;
-      justify-content: center;
+    
+    .tabs {
+      margin-bottom: 1em;
     }
-
-    .booking-room {
-      text-align: center;
+    
+    .tab-btn {
+      background: none;
+      border: none;
+      padding: 0.3em 0.6em;
+      cursor: pointer;
+      font: inherit;
+    }
+    
+    .tab-btn.active {
+      border-bottom: 2px solid currentColor;
+      font-weight: bold;
+    }
+    
+    /* calendar spacing only */
+    #calendar-room-1,
+    #calendar-room-2 {
+      max-width: 900px;
+      margin-bottom: 3rem;
     }
   </style>
 </head>
@@ -153,15 +146,13 @@
 </p>
 
 <div class="tabs">
-
-  <div class="tab-buttons">
-    <button class="active" data-tab="talks">Seminar talks</button>
-    <button data-tab="bookings">Room bookings</button>
-  </div>
+  <button class="tab-btn active" data-tab="speakers">Speakers</button>
+  <button class="tab-btn" data-tab="bookings">Room bookings</button>
+</div>
 
   <!-- ================= TALKS TAB ================= -->
 
-  <div id="talks" class="tab-content active">
+  <div id="speakers" class="tab-content active">
 
     <div class="seminar-box">
       <h4><i>Speakers 2026</i></h4>
@@ -788,43 +779,13 @@
   <!-- ================= BOOKINGS TAB ================= -->
 
   <div id="bookings" class="tab-content">
+  <h3>Seminar room A</h3>
+  <div id="calendar-room-1"></div>
 
-    <div class="seminar-box">
-      <h4><i>Seminar room bookings</i></h4>
-
-      <p>
-        Booking schedules for seminar rooms
-        <strong><a href="https://webmail.kth.se/owa/calendar/sci_math_3418@ug.kth.se/Calendar/calendar.html">3418</a></strong>
-        and
-        <strong><a href="https://webmail.kth.se/owa/calendar/sci_math_3721@ug.kth.se/Calendar/calendar.html">3721</a></strong>.
-      </p>
-
-      <div class="booking-grid">
-
-        <div class="booking-room">
-          <h5>Room 3418</h5>
-          <iframe
-            data-src="https://webmail.kth.se/owa/calendar/sci_math_3418@ug.kth.se/Calendar/calendar.html"
-            width="400"
-            height="300"
-            style="border:0;">
-          </iframe>
-        </div>
-
-        <div class="booking-room">
-          <h5>Room 3721</h5>
-          <iframe
-            data-src="https://webmail.kth.se/owa/calendar/sci_math_3721@ug.kth.se/Calendar/calendar.html"
-            width="400"
-            height="300"
-            style="border:0;">
-          </iframe>
-        </div>
-
-      </div>
-    </div>
-
-  </div>
+  <h3>Seminar room B</h3>
+  <div id="calendar-room-2"></div>
+</div>
+  
 
 </div>
 
@@ -866,6 +827,46 @@
       }
     });
   });
+</script>
+<script>
+  // tabs
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+
+      btn.classList.add('active');
+      document.getElementById(btn.dataset.tab).classList.add('active');
+
+      if (btn.dataset.tab === 'bookings') {
+        calendar1.render();
+        calendar2.render();
+      }
+    });
+  });
+
+  function makeCalendar(el, icsUrl) {
+    return new FullCalendar.Calendar(el, {
+      initialView: 'timeGridWeek',
+      firstDay: 1,
+      height: 'auto',
+      nowIndicator: true,
+      events: {
+        url: icsUrl,
+        format: 'ics'
+      }
+    });
+  }
+
+  const calendar1 = makeCalendar(
+    document.getElementById('calendar-room-1'),
+    'ICS_URL_ROOM_1'
+  );
+
+  const calendar2 = makeCalendar(
+    document.getElementById('calendar-room-2'),
+    'ICS_URL_ROOM_2'
+  );
 </script>
 
 </body>
