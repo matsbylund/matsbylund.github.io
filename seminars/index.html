@@ -166,14 +166,30 @@
   <div class="talk">
     <details>
       <summary>
-        Favorit i repris.
+        Feigenbaum's second theory of the presentation function
       </summary>
       <div class="abstract">
         <p>
-          Feigenbaum.
-        </p>
-        <p>
-          Collaborators?
+          The understanding of universality in transitions to chaos achieved in the 1970ies in the sense of physics, and later as rigorous mathematics, is based on renormalization. 
+          In the abstract renormalization is a change of the representation of some object from a change of resolution of observation. As applied to dynamics at the transition to chaos the change is
+          from observing the system at every (discrete) time point to more widely spaced time points. The paradigmatic case is period-doubling where the sequence is every time point, every second time
+          point, every fourth time point, and so on.
+          <br><br>
+          From the fixed point of renormalization one can compute metric properties, of which one of the most famous is Feigenbaum's quantity $\alpha$ in period-doubling. Wikipedia says that it is 
+          $2.502907875095892822283902873218$ (I personally never computed it with so many digits).
+          <br><br>
+          This $\alpha$ is however just one out of many metric properties which can also be computed from the renormalization fixed point. For instance, it is well known that $2^k$ almost returns of the critical point (conventionally $x=0$) 
+          to itself at the accumulation point of period doublings scale as $(1/-\alpha)^k$, the renormalization transformation in fact encodes this regularity. However, it is then obvious that 
+          $2^k$ almost returns of one iteration of the critical point (conventionally $f(0)$) must scale as $(1/\alpha)^{2k}$. Hence $(1/-\alpha)$ and $(1/\alpha^2)$ both appear as metric regularities, and these numbers 
+          can be extended to a real function $\sigma(t)$ on $[0,1/2]$ which Feigenbaum first called `scaling function' and later `presentation function'.
+          <br><br>
+          A bit less known is the fact that the presentation function can itself be computed as a fixed point, without direct reference to the standard renormalization, or its fixed point.
+          <br><br>
+          I will present how this is done, with no pretence of mathematical rigor, and without showing my own numerical data on the problem, which I did at an earlier time in this 
+          seminar. I will also not consider the case of golden mean mode locking of circle maps, where a similar analysis has been carried out, but only focus on period-doubling.
+          <br><br>
+          The talk is based on M Feigenbaum, J Stat Phys vol 52 Nos 3/4 (1988) pp. 527-569, a paper which has been cited $121$ times according to Google scholar, but where the 
+          main idea, to my knowledge, has not been much developed further, nor has it been taken up by others.
         </p>
       </div>
     </details>
